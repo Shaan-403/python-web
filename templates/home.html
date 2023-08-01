@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stitle</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        #banner{
+            height: 360px;
+            width : 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">Careers</h1>
+        <img class="img-fluid" id="banner" src="../static/banner.jpg" />
+        <div class="caption">Caption text goes here</div>
+        
+        <h2 class="text-center mt-2 mb-4"> About</h2>
+        <p class="lead"> hwsvfc wdiuabduiw iawvudvw bwuigbduwb wuiavfuiv buiawbfiu </p>
+        <h2 class="text-center mt-2 mb-4">open positions</h2>
+        <p >
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {%endfor%}
+        </p>
+        <div class="text-center" >
+            <button class="btn btn-primary btn-lg">Contact Us</button>
+            <p class="mt-4">copyright</p>
+        </div> 
+    </div>
+</body>
+</html>
